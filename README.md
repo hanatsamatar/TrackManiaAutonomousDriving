@@ -9,7 +9,7 @@ TrackMania Convolutional Neural Net
 6. [Fine Tuning and Training](#fine-tuning-and-training)
 7. [Results](#results)
 8. [What I Would Like to Continue](#what-i-would-like-to-continue)
-9. [Sources and Citations] 
+9. [Sources and Citations](#sources-and-citations) 
 
 # Introduction 
 
@@ -17,7 +17,6 @@ For the Independent Study I’ve begun constructing a CNN that can take in image
 racing game (Track Mania) and outputs speed and steering information to control the vehicle. I
 plan to train the car on a custom course to be able to replicate driving behavior.
 
-[[Back To Top](#table-of-contents)]
 
 # Data Collection 
 
@@ -36,6 +35,8 @@ Here is an example of what the data looks like post processing:
 
 ![speed ](https://user-images.githubusercontent.com/72223941/207712744-0d24dda3-3e00-47d8-a348-446f7457fc0e.png)
  
+ [[Back To Top](#table-of-contents)]
+ 
 # Model Usage 
 
 When researching models to find a base type I decided that Nvidia’s End to End Learning for
@@ -50,6 +51,7 @@ I used a Relu activation function for each densely connected layer and expanded 
 
 ![model_diagram](https://user-images.githubusercontent.com/72223941/207716028-c118a944-90aa-498b-b239-fedfee6dac49.png)
 
+[[Back To Top](#table-of-contents)]
 
 # Blockers 
 
@@ -61,11 +63,15 @@ Another issue which was hard to grasp until towards the end was trying to replic
 
 Besides that the other challenges revolved mostly around connecting different platforms and softwares together for different purposes. 
 
+[[Back To Top](#table-of-contents)]
+
 # Fine-Tuning and Training
 
 For this project, I wanted to explore automated hyperparameter tuning, since on PyTorch, RayTune would let me automate the parameter sweep process while simultaneously parallelizing the training using fractional GPU’s and early termination of bad trials. 
 
 ![batch](https://user-images.githubusercontent.com/72223941/207721387-83e0e156-afd9-4b76-ac95-172ebb94a872.png)
+
+[[Back To Top](#table-of-contents)]
 
 # Results 
 
@@ -77,12 +83,32 @@ The accuracy problem doesn't return the best results due to the high volume of n
 
 Here's an example of it running well on the simple map: 
 
+[YouTube Video](https://youtu.be/-1cM-NEqQuY).
+
+
+
 # What I Would Like to Continue
 
 If given the opportunity, I would like to collect more high-quality training data. I assume a reason for unpredictable and noisy performance was due to the lack of large amounts of data to learn from. One fix I was looking into was implementing a dual recording/inferencing script that would allow me to switch between the model and my own inputs. This would help record specific scenarios when the model is failing and let me get more relevant learning data. On top of this, I could experiment with adding more adjustments to the Nvidia model. 
+
+[[Back To Top](#table-of-contents)]
 
 # Sources and Citations 
 
 | File | Work Description |
 | --  | --- |
-| `dataset.py` | Implemented by me. Heavily based on examples from [PyTorch](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html). |
+| `dataset.py` | Implemented by me. heavily based on examples from [PyTorch](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html). |
+| `inference.py` | Implemented by me, except one line of steering smoothing from [this project](https://github.com/SullyChen/Autopilot-TensorFlow/). |
+| `make_link.bat` | Implemented by me to link OpenPlanet plugin file to the plugin directory. |
+| `train.py` | Implemented by me, inspiried from multiple online sources |
+| `tune.py` | Implemented by me, modified from [PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html). |
+| `recorder.py` | Implemented by me, besides XboxController class modified slightly from [here](https://stackoverflow.com/questions/46506850/how-can-i-get-input-from-an-xbox-one-controller-in-python). |
+| `model.py` | Implemented by me, inspired by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). |
+| `visualize_model.py` | Implemented by me. |
+| `Plugin_TrackManiaCustomAPI.as` | Implemented by me. |
+| `process_data.py` | Implemented by me. |
+
+
+
+[[Back To Top](#table-of-contents)]
+
