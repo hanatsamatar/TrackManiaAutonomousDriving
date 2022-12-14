@@ -12,11 +12,10 @@
 
 # Introduction 
 
-For the Independent Study I’ve begun constructing a CNN that can take in images from a car
-racing game (Track Mania) and outputs speed and steering information to control the vehicle. I
-plan to train the car on a custom course to be able to replicate driving behavior.
+For the Independent Study I’ve constructed a CNN that can take in images from a car racing game (Track Mania) and outputs speed and steering information to control the vehicle. I decided to look into Convolutional Neural Networks by training one to drive the game's vehicle. By training the model through screenshots and car telemetry, the model is able to replicate driving behavior to autonomously control the vehicle. 
 
-
+ [[Back To Top](#table-of-contents)]
+ 
 # Data Collection 
 
 Using python and OpenPlanet, a scripting platform for the video game, I was able to access
