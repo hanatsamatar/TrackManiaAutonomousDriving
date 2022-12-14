@@ -104,7 +104,7 @@ If given the opportunity, I would like to collect more high-quality training dat
 | `tune.py` | Implemented by me, modified from [PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html). |
 | `recorder.py` | Implemented by me, besides XboxController class modified slightly from [here](https://stackoverflow.com/questions/46506850/how-can-i-get-input-from-an-xbox-one-controller-in-python). |
 | `model.py` | Implemented by me, inspired by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). |
-| `Plugin_TrackManiaCustomAPI.as` | Implemented by me. |
+| `Plugin_TrackManiaCustomAPI.as` | Implemented by me using [this source](https://trackmania-api-node.netlify.app/); had to learn the basics of ActionScript to get this done |
 | `process_data.py` | Implemented by me. |
 
 
