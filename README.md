@@ -3,13 +3,13 @@ TrackMania Convolutional Neural Net
 
 # Table of Contents
 1. [Introduction](#introduction) 
-3. Data Collection 
-4. Model Usage
-5. Blockers / Difficulties
-6. Fine-Tuning and Training
-7. Results
-8. What I Would Like to Continue On
-9. Sources and Citations 
+3. [Data Collection](#data-collection) 
+4. [Model Usage](#model-usage)
+5. [Blockers](#blockers)
+6. [Fine Tuning and Training](#fine-tuning-and-training)
+7. [Results](#results)
+8. [What I Would Like to Continue](#what-i-would-like-to-continue)
+9. [Sources and Citations] 
 
 # Introduction 
 
@@ -51,7 +51,7 @@ I used a Relu activation function for each densely connected layer and expanded 
 ![model_diagram](https://user-images.githubusercontent.com/72223941/207716028-c118a944-90aa-498b-b239-fedfee6dac49.png)
 
 
-# Blockers / Difficulties
+# Blockers 
 
 One challenge was the restriction on the speed data (0 -~300). This mostly impacted the performance on the prediction processing. By normalizing the data to be between (0-1), as I mentioned in my Status Report 1 Conclusion, I was able to fix this. 
 
@@ -77,7 +77,7 @@ The accuracy problem doesn't return the best results due to the high volume of n
 
 Here's an example of it running well on the simple map: 
 
-# What I Would Like to Continue On
+# What I Would Like to Continue
 
 If given the opportunity, I would like to collect more high-quality training data. I assume a reason for unpredictable and noisy performance was due to the lack of large amounts of data to learn from. One fix I was looking into was implementing a dual recording/inferencing script that would allow me to switch between the model and my own inputs. This would help record specific scenarios when the model is failing and let me get more relevant learning data. On top of this, I could experiment with adding more adjustments to the Nvidia model. 
 
