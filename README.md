@@ -67,8 +67,12 @@ For this project, I wanted to explore automated hyperparameter tuning, since on 
 
 ![batch](https://user-images.githubusercontent.com/72223941/207721387-83e0e156-afd9-4b76-ac95-172ebb94a872.png)
 
+# Results 
 
+Since the model is a regression model, I expected within 0.10 of the expected value to be the margin of error. Result of testing the model on the test dataset: 
 
+![ddataset](https://user-images.githubusercontent.com/72223941/207722255-f1a113d5-5239-4618-82a0-32842cafec94.png)
 
+The accuracy problem doesn't return the best results due to the high volume of noise and bad data, however it still preforms well when used to control the vehicle. Even after adding more data however to learn from bad situations, it would still often get stuck on basic manuevers.
 
-
+Here's an example of it running well on the simple map: 
