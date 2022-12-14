@@ -9,7 +9,7 @@ TrackMania Convolutional Neural Net
 6. Fine-Tuning and Training
 7. Results
 8. What I Would Like to Continue On
-9. Sources 
+9. Sources and Citations 
 
 # Introduction 
 
@@ -76,3 +76,13 @@ Since the model is a regression model, I expected within 0.10 of the expected va
 The accuracy problem doesn't return the best results due to the high volume of noise and bad data, however it still preforms well when used to control the vehicle. Even after adding more data however to learn from bad situations, it would still often get stuck on basic manuevers.
 
 Here's an example of it running well on the simple map: 
+
+# What I Would Like to Continue On
+
+If given the opportunity, I would like to collect more high-quality training data. I assume a reason for unpredictable and noisy performance was due to the lack of large amounts of data to learn from. One fix I was looking into was implementing a dual recording/inferencing script that would allow me to switch between the model and my own inputs. This would help record specific scenarios when the model is failing and let me get more relevant learning data. On top of this, I could experiment with adding more adjustments to the Nvidia model. 
+
+# Sources and Citations 
+
+| File | Work Description |
+| --  | --- |
+| `dataset.py` | Implemented by me. Heavily based on examples from [PyTorch](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html). |
