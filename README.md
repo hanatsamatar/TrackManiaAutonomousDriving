@@ -1,5 +1,4 @@
-# TrackManiaAutonomousDriving
-TrackMania Convolutional Neural Net 
+# TrackMania Autonomous Driving
 
 # Table of Contents
 1. [Introduction](#introduction) 
