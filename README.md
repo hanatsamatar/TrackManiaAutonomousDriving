@@ -60,3 +60,15 @@ Another big issue was the amount of holes in my dataset. An example being when r
 Another issue which was hard to grasp until towards the end was trying to replicate the behavior of driving in a  video game while working around the noise and unpredictable data it returns. This led to many data points returning unideal returns in scenarios where it should have obviously made a specific move; and this was noticeable in the model accuracy being fairly low. 
 
 Besides that the other challenges revolved mostly around connecting different platforms and softwares together for different purposes. 
+
+# Fine-Tuning and Training
+
+For this project, I wanted to explore automated hyperparameter tuning, since on PyTorch, RayTune would let me automate the parameter sweep process while simultaneously parallelizing the training using fractional GPU’s and early termination of bad trials. 
+
+![batch](https://user-images.githubusercontent.com/72223941/207721387-83e0e156-afd9-4b76-ac95-172ebb94a872.png)
+
+
+
+
+
+
