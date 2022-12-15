@@ -83,7 +83,9 @@ Here's an example of it running well on the simple map:
 
 [YouTube Video](https://youtu.be/-1cM-NEqQuY).
 
+Overall, this project taught me a lot about perservering to figure out new subjects. Similarly the Final Group Project - Road Sign Detection, and overall class material has taken me from understanding the utmost basics of detection, to actually crafting projects that utilize computer vision in multiple different ways.
 
+With this project specifically I was able to improve my overall flow and code management when working with tools like Visual Studio, GitHub, General Documents, and other softwares in which I slowly increased my mastery in. 
 
 # What I Would Like to Continue
 
