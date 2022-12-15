@@ -99,7 +99,7 @@ If given the opportunity, I would like to collect more high-quality training dat
 | File | Work Description |
 | --  | --- |
 | `dataset.py` | Implemented by me. heavily based on examples from [PyTorch](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html). |
-| `inference.py` | Implemented by me, except one line of steering smoothing from [here](https://github.com/SullyChen/Autopilot-TensorFlow/). |
+| `inference.py` | Implemented by me, except some lines of steering smoothing from [here](https://github.com/SullyChen/Autopilot-TensorFlow/). |
 | `train.py` | Implemented by me, inspiried from multiple online sources |
 | `tune.py` | Implemented by me, modified from [PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html). |
 | `recorder.py` | Implemented by me, besides XboxController modified from [here](https://stackoverflow.com/questions/46506850/how-can-i-get-input-from-an-xbox-one-controller-in-python). |
