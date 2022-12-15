@@ -99,10 +99,10 @@ If given the opportunity, I would like to collect more high-quality training dat
 | File | Work Description |
 | --  | --- |
 | `dataset.py` | Implemented by me. heavily based on examples from [PyTorch](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html). |
-| `inference.py` | Implemented by me, except one line of steering smoothing from [this project](https://github.com/SullyChen/Autopilot-TensorFlow/). |
+| `inference.py` | Implemented by me, except one line of steering smoothing from [here](https://github.com/SullyChen/Autopilot-TensorFlow/). |
 | `train.py` | Implemented by me, inspiried from multiple online sources |
 | `tune.py` | Implemented by me, modified from [PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html). |
-| `recorder.py` | Implemented by me, besides XboxController class modified slightly from [here](https://stackoverflow.com/questions/46506850/how-can-i-get-input-from-an-xbox-one-controller-in-python). |
+| `recorder.py` | Implemented by me, besides XboxController modified from [here](https://stackoverflow.com/questions/46506850/how-can-i-get-input-from-an-xbox-one-controller-in-python). |
 | `model.py` | Implemented by me, inspired by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). |
 | `Plugin_TrackManiaCustomAPI.as` | Implemented by me using [this source](https://trackmania-api-node.netlify.app/); had to learn the basics of AS to get this done |
 | `process_data.py` | Implemented by me. |
