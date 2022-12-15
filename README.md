@@ -27,7 +27,7 @@ One implementation which took awhile to understand was getting data from the Ope
 
 To get the steering angle input done, I implemented controller monitoring. I also implemented a datapoint cache that would cache around 10 seconds of results before saving them to the disk. This was a neat concept to learn about because it allowed me to implement keybinds to revert data when I would crash, take bad corners, or just make a mistake translating to collecting bad data.
 
-In total, about ~50,000 data points (about 1.25 hours) of driving were recorded to make the dataset. I had to preprocess the data by flipping the image and steering angles in order to ensure that there would not be any bias in one direction; this actually boosted my data points by almost 100% (99,000+ datapoints). With this data in hand I split it up into training and test data and resize each image to be 64x64. By doing this to reduce the size of the model, and converting each image to grayscale to reduce the size since color of the image is irrelevant in thai instance, I was able to improve the runtime performance. 
+In total, about ~50,000 data points (about 1.25 hours) of driving were recorded to make the dataset. I had to preprocess the data by flipping the image and steering angles in order to ensure that there would not be any bias in one direction; this actually boosted my data points by almost 100% (99,000+ datapoints). With this data in hand I split it up into training and test data and resize each image to be 64x64. To reduce the size of the model, and converting each image to grayscale to reduce the size, since color of the image is irrelevant in this instance, I was able to improve the runtime performance. 
 
 Here is an example of what the data looks like post processing:
 
@@ -55,7 +55,7 @@ I used a Relu activation function for each densely connected layer and expanded 
 
 One challenge was the restriction on the speed data (0 -~300). This mostly impacted the performance on the prediction processing. By normalizing the data to be between (0-1), as I mentioned in my Status Report 1 Conclusion, I was able to fix this. 
 
-Another big issue was the amount of holes in my dataset. An example being when recording ideal driving, the network often did not process how to recover from unideal situations like facing a wall or right turns against a wall. This resulted in bad performance which required a recording of all the data and manual monitoring and testing of the car when put into unideal situations. 
+Another big issue was the amount of holes in my dataset. An example being when recording ideal driving, the network often did not process how to recover from unideal situations like facing a wall or right turns against a wall. This resulted in bad performance which required a re-recording of all the data and manual monitoring and testing of the car when put into unideal situations. 
 
 Another issue which was hard to grasp until towards the end was trying to replicate the behavior of driving in a  video game while working around the noise and unpredictable data it returns. This led to many data points returning unideal returns in scenarios where it should have obviously made a specific move; and this was noticeable in the model accuracy being fairly low. 
 
@@ -97,7 +97,6 @@ If given the opportunity, I would like to collect more high-quality training dat
 | --  | --- |
 | `dataset.py` | Implemented by me. heavily based on examples from [PyTorch](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html). |
 | `inference.py` | Implemented by me, except one line of steering smoothing from [this project](https://github.com/SullyChen/Autopilot-TensorFlow/). |
-| `make_link.bat` | Implemented by me to link OpenPlanet plugin file to the plugin directory. |
 | `train.py` | Implemented by me, inspiried from multiple online sources |
 | `tune.py` | Implemented by me, modified from [PyTorch](https://pytorch.org/tutorials/beginner/basics/intro.html). |
 | `recorder.py` | Implemented by me, besides XboxController class modified slightly from [here](https://stackoverflow.com/questions/46506850/how-can-i-get-input-from-an-xbox-one-controller-in-python). |
